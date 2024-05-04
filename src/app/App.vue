@@ -1,11 +1,13 @@
 <template>
   <div id="app">
+    <AppHeading />
     <CalendarWeek />
     <CalendarEntry />
   </div>
 </template>
 
 <script>
+import AppHeading from './components/AppHeading.vue';
 import CalendarEntry from './components/CalendarEntry.vue';
 import CalendarWeek from './components/CalendarWeek.vue';
 
@@ -14,6 +16,7 @@ export default {
   components: {
     CalendarWeek,
     CalendarEntry,
+    AppHeading,
   },
 };
 </script>
@@ -25,11 +28,13 @@ body,
   height: 100%;
 }
 </style>
+
 <style lang="scss" scoped>
 #app {
-  background: #6e6e6e;
+  background: #555;
   display: flex;
   flex-direction: column;
+  gap: 40px;
   align-items: center;
   -webkit-align-items: center;
   justify-content: center;
